@@ -1,0 +1,48 @@
+@import "./font/index.css";
+
+html,
+body,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-family: IRANSansX !important;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.toman {
+  font-size: 14px;
+  font-size: 400;
+  margin-right: 4px;
+}
+
+.usdt {
+  margin-left: 4px;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+
+.text-green {
+  color: rgb(48, 190, 129) !important;
+}
+.text-red {
+  color: rgb(235, 65, 55)  !important;
+}
+
+.text-black{
+  color: black  ;
+}

@@ -1,0 +1,38 @@
+@import "./../../styles/scss/mixin";
+
+.top_nav_container {
+  .menu_wrapper {
+    @include flex-position(space-between);
+    min-width: 400px;
+    li {
+      @include flex-position(space-between);
+      cursor: pointer;
+        font-size: 14px;      
+        font-weight: 300; 
+      &:first-child {
+        p {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+
+  .top_brand {
+    @include flex-position;
+    button {
+      margin-left: 20px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: calc(100% + 10px);
+        transform: translateY(-50%);
+        height: 70%;
+        width: 1px;
+        background-color: rgb(192, 192, 192);
+      }
+    }
+  }
+}

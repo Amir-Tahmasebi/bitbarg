@@ -1,0 +1,12 @@
+@mixin flex-position($justify-content:center, $align-items:center, $flex-direction:row) {
+    display: flex !important;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+}
+
+@mixin font-style($font-weight:500, $font-size:14px, $color:gray) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    color: $color,
+}

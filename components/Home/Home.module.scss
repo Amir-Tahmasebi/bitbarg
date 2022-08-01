@@ -1,0 +1,173 @@
+@import "./../../styles/scss/mixin";
+
+.home_container {
+  margin-top: 45px;
+  background-color: #fff;
+  padding: 32px;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 40px 72px hsl(0deg 0% 70% / 8%);
+
+  .header {
+    @include flex-position(flex-start);
+    margin-bottom: 30px;
+
+    h1 {
+      @include font-style(700, 20px, rgb(35, 35, 35));
+      margin-left: 30px;
+    }
+
+    p {
+      position: relative;
+      padding-right: 15px;
+      font-size: 14px;
+      @include font-style(400, 14px, #8b9098);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #fbbd06;
+      }
+    }
+  }
+
+  .filter_container {
+    .search_items {
+      position: relative;
+      height: 53px;
+
+      div {
+        height: 100% !important;
+
+        input {
+          color: #8b9098;
+          padding-right: 50px;
+          &::placeholder {
+            color: #8b9098;
+            font-weight: 500;
+          }
+        }
+      }
+      svg {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #8b9098;
+      }
+    }
+
+    .filter_btn {
+      @include flex-position;
+      @include font-style(500, 14px, #5a6161);
+      width: 90%;
+      border: 1px solid #bbbdbe;
+      height: 53px;
+
+      svg {
+        margin-left: 15px;
+      }
+    }
+
+    .custom_btn_group {
+      border: 1px solid #bbbdbe;
+      border-radius: 4px;
+      height: 53px;
+      @include flex-position(space-around);
+
+      .custom_btn {
+        @include font-style(500, 14px, #8b9098);
+        background-color: #fff;
+        flex-basis: 48%;
+        height: 90%;
+        border-radius: 10px;
+      }
+      .custom_active_btn {
+        background-color: #4285f21a;
+        color: #4285f2;
+      }
+    }
+  }
+
+  .table_container {
+    width: 100%;
+    margin-top: 30px;
+    border-spacing: 0 !important;
+
+    tr {
+      &:first-child {
+        background-color: rgb(246, 246, 246);
+        border-radius: 8px !important;
+        th {
+        @include font-style(500, 14px, #292929);
+          padding: 10px 0;
+        }
+
+        th:last-child {
+          border-radius: 8px 0 0 8px;
+        }
+        th:first-child {
+          border-radius: 0 8px 8px 0;
+        }
+      }
+
+      td {
+        @include font-style(500, 14px, #585858);
+        text-align: center !important;
+        padding: 15px 0;
+        border-bottom: 1px solid rgb(235, 235, 235);
+
+        &:first-child {
+          cursor: pointer;
+          font-size: 22px;
+          color: #8b9098;
+          
+        }
+
+        &:nth-child(2) {
+          direction: ltr;
+        }
+
+        &:last-child {
+          text-align: left !important;
+        }
+
+        .tether_wrapper {
+          @include flex-position;
+          height: 100%;
+          font-weight: 700;
+          span {
+            margin-left: 6px;
+          }
+        }
+        .coin_wrapper {
+          @include flex-position(flex-end);
+          width: 70%;
+          .coin_content {
+            margin-left: 10px;
+            div {
+              span {
+                font-size: 12px;
+              }
+              span {
+                &:first-child {
+                  background-color: #e2e2e2;
+                  padding: 3px 6px;
+                  margin-right: 4px;
+                  border-radius: 4px;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

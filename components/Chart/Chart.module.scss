@@ -1,0 +1,4 @@
+@import "./../../styles/scss/mixin";
+.custom_chart_container{
+    @include flex-position;
+}
